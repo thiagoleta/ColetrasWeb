@@ -1,0 +1,48 @@
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <form class="login100-form validate-form" [formGroup]="formulario">
+        <span class="login100-form-title p-b-30">
+          Coletrans
+        </span>
+
+        <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+          <input class="input100" type="text" name="nome" placeholder="Nome Completo" [formControl]="nomeCompletoFormControl">
+        </div>
+
+        <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+          <input class="input100" type="email" name="email" placeholder="E-mail" [formControl]="emailFormControl">
+        </div>
+
+        <div class="wrap-input100 validate-input">
+          <span class="btn-show-pass" *ngIf="tipoInputSenha === 'text'">
+            <fa-icon [icon]="iconFaEye" (click)="mostrarSenha()"></fa-icon>
+          </span>
+          <span class="btn-show-pass" *ngIf="tipoInputSenha === 'password'">
+            <fa-icon [icon]="iconFaEyeSlash" (click)="mostrarSenha()"></fa-icon>
+          </span>
+          <input class="input100" [type]="tipoInputSenha" placeholder="Senha" name="pass" [formControl]="senhaFormControl">
+        </div>
+
+        <div class="container-login100-form-btn">
+          <div class="wrap-login100-form-btn">
+            <div class="login100-form-bgbtn"></div>
+            <button class="login100-form-btn">
+              Cadastrar
+            </button>
+          </div>
+        </div>
+
+        <div class="text-center p-t-30">
+          <span class="txt1">
+            Já possui uma conta?
+          </span>
+
+          <a class="txt2" [routerLink]="['/login']">
+            Entrar
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div id="wrapper">
+  <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" [ngClass]="{ 'toggled': collapsed }" id="accordionSidebar">
+    <sidebar (toggle)="toggleSidebar($event)"></sidebar>
+
+    
+  </ul>
+  <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content">
+      <header></header>
+    </div>
+    <copy-footer></copy-footer>
+  </div>
+</div>
